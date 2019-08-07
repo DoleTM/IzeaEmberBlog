@@ -1,0 +1,30 @@
+header {
+    padding: 20px;
+    margin: 20px;
+}
+
+.post-container {
+    border-style: inset;
+    display: flex;
+    float: left;
+    margin: auto;
+}
+
+.post {
+    max-width: 400px;
+    margin: auto;
+    flex-direction: column;
+}
+
+.post-title {
+    color: purple;
+}
+
+.post-author {
+    font-weight: bold;
+}
+
+.post-body {
+    font-style: italic;
+    word-wrap: break-word;
+}

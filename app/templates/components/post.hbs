@@ -1,0 +1,10 @@
+
+{{#each this.model as |post|}}
+<div class="post">
+    <h2 class="post-title">{{post.title}}</h2>
+    <aside class="post-author">{{post.userId}}</aside>
+    <article class="post-body">{{post.body}}</article>
+</div>
+{{/each}}
+
+{{yield}}
