@@ -1,19 +1,19 @@
 header {
-    padding: 20px;
-    margin: 20px;
+    height: 60px;
+    background-color: purple;
 }
 
 .post-container {
     border-style: inset;
-    display: flex;
-    float: left;
     margin: auto;
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 .post {
     max-width: 400px;
     margin: auto;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .post-title {
@@ -27,4 +27,8 @@ header {
 .post-body {
     font-style: italic;
     word-wrap: break-word;
+}
+
+footer {
+    position: static;
 }

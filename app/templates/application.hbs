@@ -1,0 +1,16 @@
+<div class="container">
+  <header>
+    <title>Izea Ember Blog</title>
+    <div>
+        <h1>Izea Ember Blog</h1>
+    <a href="https://github.com/DoleTM/IzeaEmberBlog">Github</a>
+    </div>
+  </header>
+  <div class="post-container">
+    {{#page-pagination items=this.model as |posts|}}
+      {{#each posts as |post|}}
+        <Post class="post" @post={{post}}/>
+      {{/each}}
+    {{/page-pagination}}
+  </div>
+</div>

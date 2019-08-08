@@ -1,5 +1,17 @@
 
-{{yield}}
-{{#each}}
-<button class="page"></button>
-{{/each}}
+{{yield paginatedItems}}
+<footer>
+  {{#if showPrevious}}
+    <button {{action "previousClicked"}}>{{previousArrow}}</button>
+  {{else}}
+    <button>{{previousArrow}}</button>
+  {{/if}}
+  {{#each pageNumbers as |pageNumber|}}
+    <button {{action "pageClicked" pageNumber}}>{{pageNumber}}</button>
+  {{/each}}
+  {{#if showNext}}
+    <button {{action "nextClicked"}}>{{nextArrow}}</button>
+  {{else}}
+    <button>{{nextArrow}}</button>
+  {{/if}}
+</footer>
