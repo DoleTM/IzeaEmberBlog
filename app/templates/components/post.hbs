@@ -1,3 +1,11 @@
-  <h2 class="post-title">{{this.post.title}}</h2>
-  <aside class="post-author">{{this.post.userId}}</aside>
-  <article class="post-body">{{this.post.body}}</article>
+<h2 class="post-title">{{this.post.title}}</h2>
+
+<button {{action (action 'toggleModal')}}>Read More</button>
+{{#if isShowingModal}}
+{{#modal-dialog onClose=(action (mut isShowingTranslucent) false)
+        translucentOverlay=true
+      }}
+<aside class="post-author">{{this.post.userId}}</aside>
+<article class="post-body">{{this.post.body}}</article>
+{{/modal-dialog}}
+{{/if}}

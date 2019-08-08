@@ -7,18 +7,10 @@
     </div>
   </header>
 
-  <button {{action (action 'toggleModal')}}>Open Modal</button>
-    {{#if isShowingModal}}
-      {{#modal-dialog onClose=(action 'toggleModal')
-        targetAttachment='center'
-        translucentOverlay=true
-      }}
-        <Modal class="modal" @modal={{modal}}/>
-      {{/modal-dialog}}
-    {{/if}} 
+
     {{#page-pagination class="post-container" items=this.model as |posts|}}
       {{#each posts as |post|}}
-        <Post class="post" @post={{post}}/>
+        <Post class="post" @post={{post}} {{action (action 'toggleModal')}}/>
       {{/each}}
     {{/page-pagination}}
 </div>

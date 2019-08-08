@@ -1,13 +1,6 @@
 
 {{#if enabled}}
-  <div {{action 'toggleModal'}}>
-    <div>
-      <div>
-        Title
-      </div>
-      <div>
-          Description
-      </div>
-    </div>
-  </div>
+<h2 class="post-title">{{this.post.title}}</h2>
+<aside class="post-author">{{this.post.userId}}</aside>
+<article class="post-body">{{this.post.body}}</article>
 {{/if}}

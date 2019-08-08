@@ -40,10 +40,6 @@ footer {
     grid-column-end: 4;
 }
 
-button {
-    align-content: center;
-}
-
 /* Modal Styles */
-@import 'ember-modal-dialog/ember-modal-structure.css';
-@import 'ember-modal-dialog/ember-modal-apperance.css';
+@import '../../node_modules/ember-modal-dialog/app/styles/ember-modal-dialog/ember-modal-structure.css';
+@import '../../node_modules/ember-modal-dialog/app/styles/ember-modal-dialog/ember-modal-appearance.css';
