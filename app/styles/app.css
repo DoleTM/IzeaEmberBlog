@@ -1,15 +1,20 @@
+/* Header Styles */
 header {
     height: 60px;
     background-color: purple;
 }
 
+/* Main Content Styles */
 .post-container {
     border-style: inset;
     margin: auto;
     display: grid;
     grid-template-columns: auto auto auto;
+    grid-gap: 20px;
+    justify-content: center;
 }
 
+/* Post Styles */
 .post {
     max-width: 400px;
     margin: auto;
@@ -29,6 +34,16 @@ header {
     word-wrap: break-word;
 }
 
+/* Page Pagination Button Styles */
 footer {
-    position: static;
+    grid-column-start: 1;
+    grid-column-end: 4;
 }
+
+button {
+    align-content: center;
+}
+
+/* Modal Styles */
+@import 'ember-modal-dialog/ember-modal-structure.css';
+@import 'ember-modal-dialog/ember-modal-apperance.css';

@@ -6,11 +6,19 @@
     <a href="https://github.com/DoleTM/IzeaEmberBlog">Github</a>
     </div>
   </header>
-  <div class="post-container">
-    {{#page-pagination items=this.model as |posts|}}
+
+  <button {{action (action 'toggleModal')}}>Open Modal</button>
+    {{#if isShowingModal}}
+      {{#modal-dialog onClose=(action 'toggleModal')
+        targetAttachment='center'
+        translucentOverlay=true
+      }}
+        <Modal class="modal" @modal={{modal}}/>
+      {{/modal-dialog}}
+    {{/if}} 
+    {{#page-pagination class="post-container" items=this.model as |posts|}}
       {{#each posts as |post|}}
         <Post class="post" @post={{post}}/>
       {{/each}}
     {{/page-pagination}}
-  </div>
 </div>
