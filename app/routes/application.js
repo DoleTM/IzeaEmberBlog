@@ -7,7 +7,9 @@ export default Route.extend({
     model() {
         const posts = this.get('ajax')
             .request('https://jsonplaceholder.typicode.com/posts')
-            .then(response => response.sort(() => Math.random() - 0.5));
+            .then(response => response);
+            console.log(posts);
         return posts;
+        
     }
 });

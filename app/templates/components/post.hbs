@@ -2,9 +2,11 @@
 
 <button {{action (action 'toggleModal')}}>Read More</button>
 {{#if isShowingModal}}
-{{#modal-dialog onClose=(action (mut isShowingTranslucent) false)
-        translucentOverlay=true
-      }}
+{{#modal-dialog
+    onClose=(action (mut isShowingTranslucent) false)
+    translucentOverlay=true
+}}
+<button class="modal-button" onclick={{action (action 'toggleModal')}}>X</button>
 <aside class="post-author">{{this.post.userId}}</aside>
 <article class="post-body">{{this.post.body}}</article>
 {{/modal-dialog}}
