@@ -3,19 +3,24 @@ import { inject } from '@ember/service';
 
 export default Component.extend({
     tagName: "div",
-        isShowingModal: false,
-        ajax: inject(),
+    isShowingModal: false,
+    ajax: inject(),
 
-        model() {
-            const users = this.get('ajax')
-            .request('https://jsonplaceholder.typicode.com/users')
-            .then(response => response);
-            console.log(users);
-            return users;
-        },
     actions: {
-        toggleModal: function() {
+        toggleModal: function () {
             this.toggleProperty('isShowingModal');
         }
+    },
+    didReceiveAttrs() {
+        this.get('ajax')
+            .request('https://jsonplaceholder.typicode.com/users')
+            .then(response =>
+                this.set('user', response.find(user => this.post.userId === user.id))
+            );
+        this.get('ajax')
+        .request('https://jsonplaceholder.typicode.com/comments')
+        .then(response =>
+            this.set('comment', response.find(comment => this.post.id === comment.postId))
+            );
     }
 });

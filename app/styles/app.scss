@@ -1,18 +1,28 @@
+// Global Styles
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #389f81;
+}
+
 /* Header Styles */
 header {
     height: 60px;
-    background-image: linear-gradient(to right, #ae3a3a, #4a9b71);
+    background-image: linear-gradient(to top, #2c6957, #093526);
+}
+
+.title {
+    letter-spacing: .2rem;
 }
 
 /* Main Content Styles */
 .post-container {
-    border: 1px grey;
+    border: 3px #389f81;
     margin: auto;
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 20px;
     justify-content: center;
-    background-color: #18283e;
+    background-image: linear-gradient(to bottom, #2c6957, #093526);
 }
 
 /* Post Styles */
@@ -20,6 +30,7 @@ header {
     max-width: 400px;
     margin: auto;
     flex-direction: row;
+    background-color: black;
 }
 
 .post-title {
@@ -35,10 +46,24 @@ header {
     word-wrap: break-word;
 }
 
+.user-info {
+    float: left;
+}
+
+.comment-body {
+    border-style: inset;
+}
+
 /* Page Pagination Button Styles */
 footer {
-    grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+button {
+    color: white;
+    background-image: linear-gradient(to bottom left,#dc4e71, #fee800);
+    border: none;
 }
 
 /* Modal Styles */
@@ -102,5 +127,3 @@ footer {
     background-color: rgba(128, 128, 128, .77);
   }
 
-@import '../../node_modules/ember-modal-dialog/app/styles/ember-modal-dialog/ember-modal-structure.css';
-@import '../../node_modules/ember-modal-dialog/app/styles/ember-modal-dialog/ember-modal-appearance.css';

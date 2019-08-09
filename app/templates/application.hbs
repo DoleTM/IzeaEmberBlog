@@ -1,16 +1,11 @@
 <div class="container">
   <header>
     <title>Izea Ember Blog</title>
-    <div>
-        <h1>Izea Ember Blog</h1>
-    <a href="https://github.com/DoleTM/IzeaEmberBlog">Github</a>
-    </div>
+    <a class="title" href="https://github.com/DoleTM/IzeaEmberBlog">Izea Ember Blog</a>
   </header>
-
-
-    {{#page-pagination class="post-container" items=this.model as |posts|}}
-      {{#each posts as |post|}}
-        <Post class="post" @post={{post}} {{action (action 'toggleModal')}}/>
-      {{/each}}
-    {{/page-pagination}}
+  {{#page-pagination class="post-container" items=model as |posts|}}
+    {{#each posts as |post|}}
+      <Post class="post" @post={{post}} {{action (action "toggleModal")}}/>
+    {{/each}}
+  {{/page-pagination}}
 </div>
