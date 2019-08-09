@@ -1,17 +1,20 @@
 // Global Styles
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #389f81;
+    background-color:#5c7f92;
 }
 
 /* Header Styles */
 header {
     height: 60px;
-    background-image: linear-gradient(to top, #2c6957, #093526);
+    background-image: linear-gradient(to top, #34576f, #192d3b);
 }
 
 .title {
-    letter-spacing: .2rem;
+  font-weight: bold;
+  letter-spacing: .2rem;
+  color: white;
+  padding: 20px;
 }
 
 /* Main Content Styles */
@@ -22,7 +25,7 @@ header {
     grid-template-columns: auto auto auto;
     grid-gap: 20px;
     justify-content: center;
-    background-image: linear-gradient(to bottom, #2c6957, #093526);
+    background-image: linear-gradient(to bottom, #34576f, #192d3b);
 }
 
 /* Post Styles */
@@ -30,11 +33,13 @@ header {
     max-width: 400px;
     margin: auto;
     flex-direction: row;
-    background-color: black;
+    
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom left,#f5dd6e, #e6a850);
 }
 
 .post-title {
-    color: #d8c58c;
+    color: white;
 }
 
 .post-author {
@@ -62,7 +67,7 @@ footer {
 
 button {
     color: white;
-    background-image: linear-gradient(to bottom left,#dc4e71, #fee800);
+    background-color: black;
     border: none;
 }
 
@@ -75,6 +80,7 @@ button {
 .ember-modal-dialog {
     z-index: 51;
     position: fixed;
+    display: grid;
   }
   
   .ember-modal-dialog.emd-in-place {
