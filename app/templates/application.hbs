@@ -1,0 +1,11 @@
+<div class="container">
+  <header>
+    <title>Izea Ember Blog</title>
+    <div class="title">Izea Ember Blog</div>
+  </header>
+  {{#page-pagination class="post-container" items=model as |posts|}}
+    {{#each posts as |post|}}
+      <Post class="post" @post={{post}} {{action (action "toggleModal")}}/>
+    {{/each}}
+  {{/page-pagination}}
+</div>

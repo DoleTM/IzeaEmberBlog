@@ -1,0 +1,23 @@
+<h2 class="post-title">{{this.post.title}}</h2>
+
+<button {{action (action "toggleModal")}}>Read More</button>
+{{#if isShowingModal}}
+  {{#modal-dialog
+    onClose=(action (mut isShowingTranslucent) false)
+    translucentOverlay=true
+  }}
+    <button class="modal-button" onclick={{action (action "toggleModal")}}>Close</button>
+    <div class="post-author">Author: {{this.user.username}}</div>
+    <p class="post-body">{{this.post.body}}</p>
+    <ul class="user-info">
+      <li>Authors Email: {{this.user.email}}</li>
+      <li>Authors Phone#: {{this.user.phone}}</li>  
+      <li>Authors Website: {{this.user.website}}</li>
+    </ul>
+    {{!-- <br> --}}
+    <p class="comment-body">
+      <div>({{this.comment.email}}) commented:  
+      </div>{{this.comment.body}}
+    </p>
+  {{/modal-dialog}}
+{{/if}}
